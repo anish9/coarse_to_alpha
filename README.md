@@ -1,7 +1,7 @@
-## Alpha estimation from binary image masks:
+## Alpha estimation from binary image masks 
 Estimates alpha channel given RGB image and its corresponding binary mask.
 
-## Requirements:
+## Requirements 
 * Python3.6
 * alphax
 
