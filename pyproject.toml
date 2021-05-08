@@ -1,0 +1,9 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "tensorflow==2.2",
+    "opencv-python",
+    "numpy"
+]
+build-backend = "setuptools.build_meta"
