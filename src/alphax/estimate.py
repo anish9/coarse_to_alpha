@@ -8,9 +8,40 @@ session = InteractiveSession(config=config)
 import tensorflow as tf
 import numpy as np
 import cv2
-from utils import *
 
-pred = tf.keras.models.load_model("estimate.h5")
+import sys
+
+root_ = [x for x in sys.path if x.endswith("3.6")]
+
+try:
+    pred = tf.keras.models.load_model(root_[0]+"/site-packages/alphax/estimate.h5")
+except:
+    pred = tf.keras.models.load_model(root_[1]+"/site-packages/alphax/estimate.h5")
+
+def process_image(x,norm=True):
+    x    = tf.io.read_file(x)
+    x    = tf.io.decode_png(x,channels=3)
+    x    = tf.cast(x,tf.float32)
+    rgb  = x
+    if norm:
+        rgb = rgb/255.
+    return rgb
+
+def process_mask(x,norm=False):
+    x = tf.io.read_file(x)
+    x = tf.io.decode_png(x,channels=1)
+    x = tf.cast(x,tf.float32)
+    if norm:
+        x = x/255.
+    return x
+
+def process_alpha(x,norm=True):
+    x    = tf.io.read_file(x)
+    x    = tf.io.decode_png(x,channels=1)
+    x    = tf.cast(x,tf.float32)
+    if norm:
+        x = x/255.
+    return x
 
 def edge_estimator(RGB_FILE,MASK_FILE):
     inputim = process_image(RGB_FILE)

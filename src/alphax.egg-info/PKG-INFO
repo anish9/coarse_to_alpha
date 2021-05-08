@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: alphax
+Version: 2.0
+Summary: alpha rough estimator
+Home-page: https://github.com/anish9/coarse_to_alpha
+Author: Josh Anish
+Author-email: josh.anish1@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/anish9/coarse_to_alpha/issues
+Description: alpha rough estimator
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

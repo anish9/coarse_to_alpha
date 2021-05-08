@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/alphax/__init__.py
+src/alphax/estimate.h5
+src/alphax/estimate.py
+src/alphax.egg-info/PKG-INFO
+src/alphax.egg-info/SOURCES.txt
+src/alphax.egg-info/dependency_links.txt
+src/alphax.egg-info/top_level.txt
