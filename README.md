@@ -1,2 +1,2 @@
-# coarse_to_alpha
-convert coarse binary masks to smooth alpha mask with single command
+## Alpha estimation from binary image masks
+estimates alpha channel given RGB image and its corresponding binary mask.
